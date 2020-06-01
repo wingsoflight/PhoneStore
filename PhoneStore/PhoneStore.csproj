@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="client-app\src\app\app.component.ts" />
+    <None Remove="client-app\src\app\app.module.ts" />
+    <None Remove="client-app\src\app\data.service.ts" />
+    <None Remove="client-app\src\app\phone.ts" />
+    <None Remove="client-app\src\main.ts" />
+    <None Remove="client-app\src\polyfills.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="2.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="2.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="2.1.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.14" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="client-app\src\app\app.component.ts" />
+    <TypeScriptCompile Include="client-app\src\app\app.module.ts" />
+    <TypeScriptCompile Include="client-app\src\app\data.service.ts" />
+    <TypeScriptCompile Include="client-app\src\app\phone.ts" />
+    <TypeScriptCompile Include="client-app\src\main.ts" />
+    <TypeScriptCompile Include="client-app\src\polyfills.ts" />
+  </ItemGroup>
+
+</Project>
